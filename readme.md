@@ -8,11 +8,7 @@ composer install
 ```
 php artisan key:generate
 ```
-# Backbone лежит по 
-пока
-```
-root\public\app
-```
+
 - выполните команду для запуска
 ```
 php artisan serve
