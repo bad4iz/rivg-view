@@ -12,14 +12,11 @@ namespace Rivg;
 class RivgRequest
 {
     protected $_url;
-    protected $_timeout;
     private $_a;
 
-    public function __construct($url, $timeOut = 1000)
+    public function __construct($url)
     {
         $this->_url = $url;
-        $this->_timeout = $timeOut;
-
     }
 
     public function createCurl($url = 'nul')
@@ -37,4 +34,3 @@ class RivgRequest
 $rivg = new RivgRequest("http://rivg-view/hhhh.php?Rivg=dfgsdfgfsdf");
 $resp = $rivg->createCurl();
 echo $resp;
-echo "sdfasfd";
