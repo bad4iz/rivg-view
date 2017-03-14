@@ -12,9 +12,8 @@ namespace Rivg;
 class RivgRequest
 {
     protected $_url;
-    protected $_followlocation;
     protected $_timeout;
-    protected $_post;
+    private $_a;
 
     public function __construct($url, $timeOut = 1000)
     {
@@ -28,14 +27,14 @@ class RivgRequest
         if($url != 'nul'){
             $this->_url = $url;
         }
-        $ch = curl_init($url);
-        $a = curl_exec($ch); // выполняем запрос curl - обращаемся к сервера php.su
+        $ch = curl_init($this->_url);
+        $_a = curl_exec($ch);
         curl_close($ch);
-        echo $a;
+        return $_a;
     }
-
-
 }
 
-$rivg = new RivgRequest("http://api.vk.com/method/board.getComments?group_id=99828403&topic_id=32625403&count=10");
-$rivg->createCurl();
+$rivg = new RivgRequest("http://rivg-view/hhhh.php?Rivg=dfgsdfgfsdf");
+$resp = $rivg->createCurl();
+echo $resp;
+echo "sdfasfd";
