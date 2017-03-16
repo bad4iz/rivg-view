@@ -13,7 +13,7 @@ for ($i = 0; $i < 9; $i++) {
 }
 $resp['timeout'] = time() ;
 
-
+$resp['F001'] *= 10;
 if(isset($_GET['Rivg'])){
     echo json_encode($resp);
 }

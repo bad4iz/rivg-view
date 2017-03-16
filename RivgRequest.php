@@ -33,4 +33,7 @@ class RivgRequest
 
 $rivg = new RivgRequest("http://rivg-view/hhhh.php?Rivg=dfgsdfgfsdf");
 $resp = $rivg->createCurl();
-echo $resp;
+
+if(isset($_GET['Rivg'])){
+    echo$resp;
+}
