@@ -139,9 +139,8 @@ setInterval(() => {
     httpGet("/RivgRequest.php?Rivg")
         .then(
             response => {
-                let length0 = myLineChart.data.datasets[0].data.length;
                 let length1 = myLineChart.data.datasets[1].data.length;
-                myLineChart.data.datasets[0].data[length0]=response.F001;
+                myLineChart.data.datasets[0].data[length1]=response.F001;
                 myLineChart.data.datasets[1].data[length1]=response.F002;
                 myLineChart.data.datasets[2].data[length1]=response.F003;
                 myLineChart.data.datasets[3].data[length1]=response.F004;
@@ -153,7 +152,7 @@ setInterval(() => {
             },
             error => console.log(`Rejected: ${error}`)
         );
-}, 10);
+}, 100);
 
 
 function httpGet(url) {
